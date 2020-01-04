@@ -12655,7 +12655,7 @@ var ClientArea = function () {
         this.injectHTML();
         this.form = document.querySelector(".client-area__form");
         this.field = document.querySelector(".client-area__input");
-        this.contentArea = document.querySelector("client-area__content-area");
+        this.contentArea = document.querySelector(".client-area__content-area");
         this.events();
     }
 
@@ -12680,7 +12680,7 @@ var ClientArea = function () {
                 _this2.form.remove();
                 _this2.contentArea.innerHTML = response.data;
             }).catch(function () {
-                _this2.contentArea.innerHTML = "<p class=\"client__error\">That secret phrase is not correct. Try again.</p>";
+                _this2.contentArea.innerHTML = "<p class=\"client-area__error\">That secret phrase is not correct. Try again.</p>";
                 _this2.field.value = '';
                 _this2.field.focus();
             });
