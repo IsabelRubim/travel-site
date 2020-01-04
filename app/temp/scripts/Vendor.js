@@ -60,32 +60,26 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 36);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */
+/******/ ({
+
+/***/ 36:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(9);
+__webpack_require__(37);
 
-__webpack_require__(10);
+__webpack_require__(38);
 
-__webpack_require__(11);
+__webpack_require__(39);
 
 /***/ }),
-/* 9 */
+
+/***/ 37:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -94,7 +88,7 @@ __webpack_require__(11);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /*!
- * modernizr v3.7.1
+ * modernizr v3.8.0
  * Build https://modernizr.com/download?-flexbox-svg-setclasses-dontmin
  *
  * Copyright (c)
@@ -130,7 +124,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
    */
   var ModernizrProto = {
     // The current version, dummy
-    _version: '3.7.1',
+    _version: '3.8.0',
 
     // Any settings that don't work as separate modules
     // can go in here as configuration.
@@ -246,8 +240,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
           if (featureNameSplit.length === 1) {
             Modernizr[featureNameSplit[0]] = result;
           } else {
-            // cast to a Boolean, if not one already
-            if (Modernizr[featureNameSplit[0]] && !(Modernizr[featureNameSplit[0]] instanceof Boolean)) {
+            // cast to a Boolean, if not one already or if it doesnt exist yet (like inputtypes)
+            if (!Modernizr[featureNameSplit[0]] || Modernizr[featureNameSplit[0]] && !(Modernizr[featureNameSplit[0]] instanceof Boolean)) {
               Modernizr[featureNameSplit[0]] = new Boolean(Modernizr[featureNameSplit[0]]);
             }
 
@@ -633,12 +627,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     var afterInit, i, propsLength, prop, before;
 
     // If we don't have a style element, that means we're running async or after
-    // the core tests, so we'll need to create our own elements to use
+    // the core tests, so we'll need to create our own elements to use.
 
-    // inside of an SVG element, in certain browsers, the `style` element is only
+    // Inside of an SVG element, in certain browsers, the `style` element is only
     // defined for valid tags. Therefore, if `modernizr` does not have one, we
     // fall back to a less used element and hope for the best.
-    // for strict XHTML browsers the hardly used samp element is used
+    // For strict XHTML browsers the hardly used samp element is used.
     var elems = ['modernizr', 'tspan', 'samp'];
     while (!mStyle.style && elems.length) {
       afterInit = true;
@@ -923,7 +917,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 })(window, document);
 
 /***/ }),
-/* 10 */
+
+/***/ 38:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
@@ -2474,7 +2469,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 
 
 /***/ }),
-/* 11 */
+
+/***/ 39:
 /***/ (function(module, exports) {
 
 (function(window, factory) {
@@ -3177,4 +3173,5 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 
 
 /***/ })
-/******/ ]);
+
+/******/ });

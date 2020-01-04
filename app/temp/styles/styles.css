@@ -1479,3 +1479,23 @@ Insted edit gulp/template/sprite */
             -webkit-transform: translate(-50%, -50%);
                     transform: translate(-50%, -50%);
         }
+
+.client-area {
+    padding: 30px;
+}
+
+.client-area__form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+.client-area__input {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+    }
+
+.client-area__error {
+        color: red;
+    }
